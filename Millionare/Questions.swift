@@ -7,15 +7,14 @@
 //
 
 import SwiftUI
+import Foundation
 
-struct Questions: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
-    }
+struct question1 {
+    var question = " Question number 1"
+    var answer1 = "answer1"
+    var answer2 = "answer2"
+    var answer3 = "answer3"
+    var answer4 = "answer4"
+
 }
 
-struct Questions_Previews: PreviewProvider {
-    static var previews: some View {
-        Questions()
-    }
-}
