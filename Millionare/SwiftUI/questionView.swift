@@ -14,27 +14,45 @@ struct questionView: View {
             Text(number1.question)
                 .padding(.top, 100)
             HStack {
+                
                 VStack{
-                    Button(action: {print("Button Pushed")}) {
-                        Answer1Btn()
+                    Button(action: {print("Button Pushed")
+                        let test = question1()
+                        let test2 = number1.answer1
+                        test.currectAnswer(answer: test2)
+                        
+                        }) {
+                            Answer1Btn()
                     }
-                    Button(action: {print("Button Pushed")}) {
+                    Button(action: {print("Button Pushed")
+                        let test = question1()
+                        let test2 = number1.answer2
+                        test.currectAnswer(answer: test2)
+
+                    }) {
                         Answer2Btn()
                     }
                 }
                 VStack {
-                    Button(action: {print("Button Pushed")}) {
+                    Button(action: {print("Button Pushed")
+                        let test = question1()
+                        let test2 = number1.answer3
+                        test.currectAnswer(answer: test2)
+                    }) {
                         Answer3Btn()
                     }
-                    Button(action: {print("Button Pushed")}) {
+                    Button(action: {print("Button Pushed")
+                        let test = question1()
+                        let test2 = number1.answer4
+                        test.currectAnswer(answer: test2)
+                    }) {
                         Answer4Btn()
                     }
                 }
             }
-                
-               
               .padding(.top, 130)
         }
+        .background(CircleImage())
     }
 }
 struct questionView_Previews: PreviewProvider {
@@ -43,13 +61,7 @@ struct questionView_Previews: PreviewProvider {
     }
 }
 
-private var number1 = question1(question: "2+2", answer1: "4", answer2: "5", answer3: "6", answer4: "7")
-private var number2 = question1(question: "3+3", answer1: "5", answer2: "6", answer3: "7", answer4: "8")
-private var number3 = question1(question: "4+4", answer1: "6", answer2: "7", answer3: "8", answer4: "9")
-private var number4 = question1(question: "5+5", answer1: "9", answer2: "10", answer3: "11", answer4: "12")
-private var number5 = question1(question: "6+6", answer1: "12", answer2: "13", answer3: "14", answer4: "15")
 
-private var allQuestions = [number1, number2, number3, number4, number5]
 
 struct Answer1Btn: View {
 var body: some View {
@@ -83,9 +95,15 @@ var body: some View {
         .foregroundColor(Color.red)
 }
 }
-func currectAnswer(index: Int) -> question1 {
-    for i in index ..< allQuestions.count {
-       index = allQuestions[i]
+
+struct CircleImage: View {
+    var body: some View {
+        Image("image")
+//            .clipShape(Circle())
+//            .overlay(
+//                Circle().stroke(Color.white, lineWidth: 4))
+//            .shadow(radius: 10)
     }
-    return index
 }
+
+

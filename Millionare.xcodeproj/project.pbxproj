@@ -15,6 +15,10 @@
 		CE4803DC235DE7FF002367BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4803DA235DE7FF002367BE /* LaunchScreen.storyboard */; };
 		CE4803EC235EE6A3002367BE /* questionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4803EB235EE6A3002367BE /* questionView.swift */; };
 		CE4803EE235EF003002367BE /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4803ED235EF003002367BE /* Questions.swift */; };
+		CE4BCA7923607C2600A1B4D3 /* question2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BCA7823607C2600A1B4D3 /* question2.swift */; };
+		CE4BCA7C2360804C00A1B4D3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BCA7B2360804C00A1B4D3 /* MainVC.swift */; };
+		CE4BCA7E2360817600A1B4D3 /* QuestionsUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BCA7D2360817600A1B4D3 /* QuestionsUIKit.swift */; };
+		CE4BCA802360818000A1B4D3 /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BCA7F2360818000A1B4D3 /* Answers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		CE4803DD235DE7FF002367BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE4803EB235EE6A3002367BE /* questionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionView.swift; sourceTree = "<group>"; };
 		CE4803ED235EF003002367BE /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		CE4BCA7823607C2600A1B4D3 /* question2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = question2.swift; sourceTree = "<group>"; };
+		CE4BCA7B2360804C00A1B4D3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		CE4BCA7D2360817600A1B4D3 /* QuestionsUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsUIKit.swift; sourceTree = "<group>"; };
+		CE4BCA7F2360818000A1B4D3 /* Answers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE38A1272361992F00781D32 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				CE4803D3235DE7F6002367BE /* ContentView.swift */,
+				CE4803EB235EE6A3002367BE /* questionView.swift */,
+				CE4BCA7823607C2600A1B4D3 /* question2.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		CE4803C3235DE7F6002367BE = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +78,12 @@
 		CE4803CE235DE7F6002367BE /* Millionare */ = {
 			isa = PBXGroup;
 			children = (
+				CE38A1272361992F00781D32 /* SwiftUI */,
 				CE4803CF235DE7F6002367BE /* AppDelegate.swift */,
-				CE4803D1235DE7F6002367BE /* SceneDelegate.swift */,
-				CE4803D3235DE7F6002367BE /* ContentView.swift */,
-				CE4803EB235EE6A3002367BE /* questionView.swift */,
 				CE4803ED235EF003002367BE /* Questions.swift */,
+				CE4803D1235DE7F6002367BE /* SceneDelegate.swift */,
 				CE4803D5235DE7FF002367BE /* Assets.xcassets */,
+				CE4BCA7A2360803100A1B4D3 /* UIKit */,
 				CE4803DA235DE7FF002367BE /* LaunchScreen.storyboard */,
 				CE4803DD235DE7FF002367BE /* Info.plist */,
 				CE4803D7235DE7FF002367BE /* Preview Content */,
@@ -79,6 +97,16 @@
 				CE4803D8235DE7FF002367BE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE4BCA7A2360803100A1B4D3 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				CE4BCA7B2360804C00A1B4D3 /* MainVC.swift */,
+				CE4BCA7D2360817600A1B4D3 /* QuestionsUIKit.swift */,
+				CE4BCA7F2360818000A1B4D3 /* Answers.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +184,11 @@
 				CE4803D0235DE7F6002367BE /* AppDelegate.swift in Sources */,
 				CE4803D2235DE7F6002367BE /* SceneDelegate.swift in Sources */,
 				CE4803EE235EF003002367BE /* Questions.swift in Sources */,
+				CE4BCA802360818000A1B4D3 /* Answers.swift in Sources */,
+				CE4BCA7923607C2600A1B4D3 /* question2.swift in Sources */,
+				CE4BCA7E2360817600A1B4D3 /* QuestionsUIKit.swift in Sources */,
 				CE4803D4235DE7F6002367BE /* ContentView.swift in Sources */,
+				CE4BCA7C2360804C00A1B4D3 /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

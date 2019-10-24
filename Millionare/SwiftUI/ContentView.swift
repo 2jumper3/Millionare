@@ -21,6 +21,7 @@ struct ContentView: View {
             .navigationBarTitle("First")
             .navigationBarHidden(true)
         }
+
             
 }}
 
