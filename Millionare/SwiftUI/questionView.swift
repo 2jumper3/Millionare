@@ -19,7 +19,7 @@ struct questionView: View {
                     Button(action: {print("Button Pushed")
                         let test = question1()
                         let test2 = number1.answer1
-                        test.currectAnswer(answer: test2)
+//                        test.currectAnswer(answer: test2)
                         
                         }) {
                             Answer1Btn()
@@ -27,7 +27,7 @@ struct questionView: View {
                     Button(action: {print("Button Pushed")
                         let test = question1()
                         let test2 = number1.answer2
-                        test.currectAnswer(answer: test2)
+//                        test.currectAnswer(answer: test2)
 
                     }) {
                         Answer2Btn()
@@ -37,14 +37,14 @@ struct questionView: View {
                     Button(action: {print("Button Pushed")
                         let test = question1()
                         let test2 = number1.answer3
-                        test.currectAnswer(answer: test2)
+//                        test.currectAnswer(answer: test2)
                     }) {
                         Answer3Btn()
                     }
                     Button(action: {print("Button Pushed")
                         let test = question1()
                         let test2 = number1.answer4
-                        test.currectAnswer(answer: test2)
+//                        test.currectAnswer(answer: test2)
                     }) {
                         Answer4Btn()
                     }

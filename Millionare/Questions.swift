@@ -16,19 +16,14 @@ struct question1 {
     var answer3 = "answer3"
     var answer4 = "answer4"
     
-    
-    
-    
-    func currectAnswer(answer: String){
-        for i in 0 ..< currectAnswers.count {
-            if answer == currectAnswers[i] {
-            print("currect")
-//            addNavigationLink()
-            }
-        }
- 
-        print("lalala")
-    }
+}
+
+struct question2 {
+    var question = " Question number 1"
+    var answer1 = "answer1"
+    var answer2 = "answer2"
+    var answer3 = "answer3"
+    var answer4 = "answer4"
 }
 
 
