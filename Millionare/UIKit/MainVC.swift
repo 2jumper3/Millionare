@@ -16,13 +16,15 @@ class MainVC: UIViewController {
     var questions4View: Answers!
     var questionView: QuestionsUIKit!
     var difficulty: Difficulty!
+    var gameState: GameState!
     
-
+    
     
     var textBtn1 = UIButton()
     var textBtn2 = UIButton()
     var textBtn3 = UIButton()
     var textBtn4 = UIButton()
+    let questionTextLabel = UILabel()
 
     var testQuestions: NSArray = []
     
@@ -31,14 +33,19 @@ class MainVC: UIViewController {
         self.view.backgroundColor = .blue
         addAnswers()
         addQuestions()
-        let gameDelegate: Game?
         self.counter = 0
         
+        let test = self.gameState
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
+        if self.difficulty == .easy {
                 addText(text: number1)
+        }
+        if self.difficulty == .hard {
+            addText(text: hard1)
+        }
 
     }
     
@@ -67,16 +74,13 @@ class MainVC: UIViewController {
         self.view.addSubview(question1)
     }
     //MARK: - добавление текста вопросов/ответов
+    
+    
      func addText (text: question1) {
-        let questionTextLabel = UILabel()
-//        if difficulty {
-//            
-//        }
-        number2 = hard1
-        
-        questionTextLabel.frame = self.questionView.bounds
-        questionTextLabel.text  = text.question
-        questionTextLabel.textAlignment = .center
+
+        self.questionTextLabel.frame = self.questionView.bounds
+        self.questionTextLabel.text  = text.question
+        self.questionTextLabel.textAlignment = .center
         
         self.textBtn1.frame = self.questionsView.bounds
         self.textBtn1.setTitle(text.answer1, for: .normal)
@@ -124,16 +128,16 @@ class MainVC: UIViewController {
     
     
     // MARK:- нажатие
-    @objc private  func buttonAction1() {
+    @objc  func buttonAction1() {
         currectAnswer(text: self.textBtn1.titleLabel?.text ?? "error")
     }
-    @objc private  func buttonAction2() {
+    @objc   func buttonAction2() {
         currectAnswer(text: self.textBtn2.titleLabel?.text ?? "error")
     }
-    @objc private  func buttonAction3() {
+    @objc   func buttonAction3() {
         currectAnswer(text: self.textBtn3.titleLabel?.text ?? "error")
     }
-    @objc private  func buttonAction4() {
+    @objc   func buttonAction4() {
         currectAnswer(text: self.textBtn4.titleLabel?.text ?? "error")
     }
     
@@ -155,27 +159,40 @@ class MainVC: UIViewController {
                                 self.addQuestions()
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-
-                                    if self.counter == 0 {
-                                        self.addText(text: self.number1)
+                                    if self.difficulty == .easy {
+                                        if self.counter == 0 {
+                                            self.addText(text: self.number1)
+                                        }
+                                        if self.counter == 1 {
+                                            self.addText(text: self.number2)
+                                        }
+                                        if self.counter == 2 {
+                                            self.addText(text: self.number3)
+                                        }
+                                        if self.counter == 3 {
+                                            self.addText(text: self.number4)
+                                        }
                                     }
-                                    if self.counter == 1 {
-                                        self.addText(text: self.number2)
-                                    }
-                                    if self.counter == 2 {
-                                        self.addText(text: self.number3)
-                                    }
-                                    if self.counter == 3 {
-                                        self.addText(text: self.number4)
-                                    }
+                                    if self.difficulty == .hard {
+                                            if self.counter == 0 {
+                                                self.addText(text: self.hard1)
+                                            }
+                                            if self.counter == 1 {
+                                                self.addText(text: self.hard2)
+                                            }
+                                            if self.counter == 2 {
+                                                self.addText(text: self.hard3)
+                                            }
+                                            if self.counter == 3 {
+                                                self.addText(text: self.hard4)
+                                            }
+                                        }
                                 })
                                 
                             }, completion: { (finished: Bool) in
                             })
 
                             let alertController = UIAlertController(title: "Congrats!", message: "Правильный ответ!", preferredStyle: .alert)
-            //                let alertOk = UIAlertAction(title: "Done", style: .cancel) { (action: UIAlertAction) in }
-            //                alertController.addAction(alertOk)
                             self.present(alertController, animated: true, completion: {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
                                     alertController.dismiss(animated: true, completion: nil)
@@ -191,7 +208,7 @@ class MainVC: UIViewController {
             print(Record.self)
             print("total records: \(Game.shared.records.count)")
                     self.present(alertController, animated: true, completion: {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                             alertController.dismiss(animated: true, completion: nil)
                             self.navigationController?.popViewController(animated: true)
                             

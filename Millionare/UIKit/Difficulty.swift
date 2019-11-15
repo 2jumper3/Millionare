@@ -33,7 +33,8 @@ final class HardStrategy: QuestionAppearStrategy {
         
         var temp = [0,1,2,3]
         var newCounter = temp[counter]
-        temp.remove(at: counter)
+        temp.firstIndex(of: 3)
+        
         return newCounter
     }
     

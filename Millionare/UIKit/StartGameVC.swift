@@ -48,7 +48,7 @@ class StartGameVC: UIViewController {
 
 
     }
-    private var gameStrategy: QuestionAppearStrategy {
+    var gameStrategy: QuestionAppearStrategy {
         switch self.difficulty {
         case .easy:
             return EasyStrategy()
@@ -68,6 +68,14 @@ class StartGameVC: UIViewController {
     }
     @objc func startGame() {
         let vc = MainVC()
+        if self.difficulty == .hard  {
+            vc.difficulty = .hard
+            vc.gameState = HardMode()
+        } else {
+            vc.difficulty = .easy
+            vc.gameState = EasyMode()
+        }
+        
 //        vc.difficulty = self.gameStrategy.counterIncrease(counter: 1)
         self.navigationController?.pushViewController(vc, animated: true)
     }

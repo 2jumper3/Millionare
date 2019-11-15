@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+/*
 struct questionView: View {
     var body: some View {
         VStack {
@@ -107,3 +107,4 @@ struct CircleImage: View {
 }
 
 
+*/
