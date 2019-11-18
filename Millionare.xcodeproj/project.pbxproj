@@ -25,6 +25,8 @@
 		CE69393D2372E006007D03F4 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69393C2372E006007D03F4 /* Game.swift */; };
 		CE69393F237409F5007D03F4 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69393E237409F5007D03F4 /* SettingsVC.swift */; };
 		CE693941237424B7007D03F4 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE693940237424B7007D03F4 /* Difficulty.swift */; };
+		CEA70F77237EDB2400C9BA9D /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA70F76237EDB2400C9BA9D /* Prototype.swift */; };
+		CEA70F79237EF31F00C9BA9D /* FlyWight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA70F78237EF31F00C9BA9D /* FlyWight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		CE69393C2372E006007D03F4 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CE69393E237409F5007D03F4 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		CE693940237424B7007D03F4 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		CEA70F76237EDB2400C9BA9D /* Prototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prototype.swift; sourceTree = "<group>"; };
+		CEA70F78237EF31F00C9BA9D /* FlyWight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyWight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,11 +124,21 @@
 				CE69393E237409F5007D03F4 /* SettingsVC.swift */,
 				CE4BCA7F2360818000A1B4D3 /* Answers.swift */,
 				CE69393C2372E006007D03F4 /* Game.swift */,
-				CE4BC4CD237D6A160074AEC4 /* StatePattern.swift */,
-				CE693940237424B7007D03F4 /* Difficulty.swift */,
+				CEA70F75237EDB0100C9BA9D /* Patterns */,
 				CE69393A2372D187007D03F4 /* ResultsVC.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		CEA70F75237EDB0100C9BA9D /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				CE4BC4CD237D6A160074AEC4 /* StatePattern.swift */,
+				CE693940237424B7007D03F4 /* Difficulty.swift */,
+				CEA70F76237EDB2400C9BA9D /* Prototype.swift */,
+				CEA70F78237EF31F00C9BA9D /* FlyWight.swift */,
+			);
+			path = Patterns;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,10 +212,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA70F77237EDB2400C9BA9D /* Prototype.swift in Sources */,
 				CE69393F237409F5007D03F4 /* SettingsVC.swift in Sources */,
 				CE4803EC235EE6A3002367BE /* questionView.swift in Sources */,
 				CE693941237424B7007D03F4 /* Difficulty.swift in Sources */,
 				CE4803D0235DE7F6002367BE /* AppDelegate.swift in Sources */,
+				CEA70F79237EF31F00C9BA9D /* FlyWight.swift in Sources */,
 				CE4803D2235DE7F6002367BE /* SceneDelegate.swift in Sources */,
 				CE4803EE235EF003002367BE /* Questions.swift in Sources */,
 				CE4BCA802360818000A1B4D3 /* Answers.swift in Sources */,
